@@ -1,0 +1,33 @@
+ALGORITHM checkPoint_algo
+VAR
+    i: INTEGER:=0;
+    longeur: INTEGER:=0;
+    str : STRING:= "you are welcome."
+    nb_words : INTEGER:= 0;
+    j: INTEGER:= 0; 
+    k: INTEGER: 0;
+    nb_voyels: INTEGER: 0;
+BEGIN
+// question1
+    WHILE (str[i]<> '.') DO
+        longeur:=longeur+1;
+        i:=i+1;
+    END_WHILE
+    write(longeur+1)
+
+    // question 2
+
+    FOR j FROM 0 TO longeur STEP 1  DO
+        IF (str[j]=' ') THEN
+        nb_words:=nb_words+1
+    END_FOR
+
+    // quetion3
+
+    FOR k FROM 0 TO longeur STEP 1  DO
+        IF (str[k]='a' or str[k]='e' or str[k]='u' or str[k]='i' or str[k]='o') THEN
+        nb_voyels:=nb_voyels+1
+        END_IF
+    END_FOR
+    write(nb_voyels)
+END
